@@ -1,0 +1,30 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package timus1000; //remove this line of code while submitting the solution otherwise, you will get Compilation Error
+import java.util.Scanner;
+
+/**
+ *
+ * @author Abir
+ */
+ // replace public class name Timus1000 with Main
+public class Timus1000 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        int a, b;
+        a = input.nextInt();
+        b = input.nextInt();
+        System.out.print(a+b);
+        
+    }
+    
+}
