@@ -1,0 +1,47 @@
+
+package uva100;
+import java.util.Scanner;
+
+public class UVA100 {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        while(input.hasNext()){
+            int i = input.nextInt();
+            int j = input.nextInt();
+            int minNum , maxNum;
+            if(i > j){
+                maxNum = i;
+                minNum = j;
+            }else{
+                maxNum = j;
+                minNum = i;
+            }
+            int maxCycleLen = 0;
+            for(int k = minNum; k <= maxNum; k++){
+                int len = countCycle(k);
+                if(len > maxCycleLen) maxCycleLen = len;
+            }
+            System.out.printf("%d %d %d\n",i,j,maxCycleLen);
+        }
+        
+    }
+    
+    static int countCycle(int N){
+        int cLength = 0;
+        while(true){
+            cLength += 1;
+            if(N == 1){
+                break;
+            }else if(N % 2 == 1){
+                N = 3 * N + 1;
+            }else {
+                N = N / 2;
+            }
+        }
+        
+        return cLength;
+    }
+    
+}
