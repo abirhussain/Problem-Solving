@@ -1,0 +1,55 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package uva993;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Abir
+ */
+public class Uva993 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        int numOfDataSet = input.nextInt();
+        while(numOfDataSet > 0){
+            int N = input.nextInt();
+            long pos = 1;
+            long Q = 0;
+            if(N == 0 ){
+                System.out.println(10);
+                numOfDataSet -= 1;
+                continue;
+            }else if(N == 1){
+                System.out.println(1);
+                numOfDataSet -= 1;
+                continue;
+            }else{
+                for(int digit = 9; digit > 1; digit--){
+                    while(N % digit == 0){
+                        Q += pos*digit;
+                        pos *= 10;
+                        N /= digit;
+                    }
+                }
+                if(N == 1){
+                    System.out.println(Q);
+                }else{
+                    System.out.println(-1);
+                }
+            }
+            numOfDataSet -= 1;
+        }
+        
+            
+}
+    
+}
