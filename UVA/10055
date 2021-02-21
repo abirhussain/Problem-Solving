@@ -1,0 +1,24 @@
+
+package pkg10055;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        while(input.hasNextLong()){
+            long hashmat = input.nextLong();
+            long opponent = input.nextLong();
+            long diff = hashmat - opponent;
+            if(diff < 0){
+                diff *= -1;
+                System.out.println(diff);
+            }else{
+                System.out.println(diff);
+            }
+        }
+        
+    }
+    
+}
