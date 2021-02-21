@@ -1,0 +1,20 @@
+
+package pkg113;
+import java.util.Scanner;
+import java.lang.*;
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        while(input.hasNext()){
+            double n = input.nextDouble();
+            double p = input.nextDouble();
+            System.out.format("%.0f\n",Math.pow(p,1/n));
+        }
+    }
+    
+}
