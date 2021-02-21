@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner input = new Scanner(System.in);
+        int T = input.nextInt();
+        while(T > 0){
+            int n = input.nextInt();
+            if(n > 10){
+                System.out.format("10 %d\n",n - 10);
+                
+            }else{
+                System.out.format("0 %d\n",n);
+            }
+            T = T - 1;
+        }
+        
+    }
+}
