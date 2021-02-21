@@ -1,0 +1,23 @@
+
+package pkg10346;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        while(input.hasNext()){
+            int n = input.nextInt();
+            int k = input.nextInt();
+            int total = n;
+            while(n >= k){
+                total = total + 1;
+                n = n - k ;
+                n = n + 1;
+            }
+            System.out.println(total);
+        }
+    }
+    
+}
