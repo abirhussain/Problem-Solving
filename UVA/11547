@@ -1,0 +1,34 @@
+
+package uva11547;
+
+import java.util.Scanner;
+public class UVA11547 {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        int testCase = input.nextInt();
+        while(testCase > 0){
+            long n = input.nextLong();
+            long ans = n * 567;
+            ans = ans / 9;
+            ans = ans + 7492;
+            ans = ans * 235;
+            ans = ans / 47;
+            ans = ans - 498;
+            ans = ans / 10;
+            ans = ans % 10;
+            if(ans < 0){
+                ans *= -1;
+                System.out.println(ans);
+            }
+            else{
+                System.out.println(ans);
+            }
+            
+            
+            testCase = testCase - 1;
+        }
+    }
+    
+}
