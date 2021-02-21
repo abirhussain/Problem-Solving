@@ -1,0 +1,14 @@
+package uva1124;
+import java.util.Scanner;
+public class UVA1124 {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        while(input.hasNext()){
+            String line = input.nextLine();
+            System.out.println(line);
+        }
+    }
+    
+}
