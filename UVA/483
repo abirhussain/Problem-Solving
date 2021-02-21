@@ -1,0 +1,29 @@
+
+package pkg483;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        while(input.hasNextLine()){
+            String line = input.nextLine();
+            String words[] = line.split(" ");
+            for(int i = 0 ; i < words.length; i++){
+                String str = words[i];
+                int j ;
+                for(j = str.length() - 1; j >= 0 ; j--){
+                    System.out.print(str.charAt(j));
+                }
+                if(i == words.length -1){
+                    break;
+                }
+                System.out.print(" ");
+            }
+            System.out.printf("\n");
+        }
+        
+    }
+    
+}
