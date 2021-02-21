@@ -1,0 +1,28 @@
+
+package uva12403;
+import java.util.Scanner;
+
+public class UVA12403 {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        int T = input.nextInt();//here T denotes the test case number
+        int total = 0;
+        while(T > 0){
+            
+            String cmd = input.next();
+            {
+                if(cmd.equalsIgnoreCase("report")){
+                    System.out.println(total);
+                }else{
+                    int amount = input.nextInt();
+                    total = total + amount;
+                }
+            }
+
+            T = T - 1;
+        }
+    }
+    
+}
