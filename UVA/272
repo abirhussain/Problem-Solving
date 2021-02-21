@@ -1,0 +1,31 @@
+
+package uva272;
+import java.util.Scanner;
+
+public class UVA272 {
+    public static void main(String args[]){
+        Scanner input = new Scanner(System.in);
+        int bracket = 0;
+        while(input.hasNext()){
+            String line = input.nextLine();
+            for(int i = 0 ; i < line.length(); i++){
+               
+                if(line.charAt(i) == '"'){
+                    if(bracket == 0){
+                        System.out.print("``");
+                        bracket = 1;
+                    }else{
+                        System.out.print("''");
+                        bracket = 0;
+                    }
+                }else{
+                    System.out.print(line.charAt(i));
+                }
+            }
+            System.out.printf("\n");
+        }
+    }
+
+      
+    
+}
